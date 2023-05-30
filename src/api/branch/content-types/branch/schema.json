@@ -4,7 +4,8 @@
   "info": {
     "singularName": "branch",
     "pluralName": "branches",
-    "displayName": "Branch"
+    "displayName": "Branch",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,6 +21,12 @@
       "type": "uid",
       "targetField": "name",
       "required": true
+    },
+    "activities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::activity.activity",
+      "mappedBy": "branch"
     }
   }
 }
